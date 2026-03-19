@@ -14,7 +14,7 @@ class Model(nn.Module):
     """
 
     # =====================================================
-    # 🔧 MOD-1: Time2Vec（支持任意 input_dim）
+    # Time2Vec（支持任意 input_dim）
     # =====================================================
     class Time2Vec(nn.Module):
         def __init__(self, dim, input_dim=1):
@@ -38,7 +38,7 @@ class Model(nn.Module):
         self.use_norm = configs.use_norm
 
         # =====================================================
-        # 🔧 MOD-2: Time2Vec 初始化（timeF, freq='h' → 4维）
+        # Time2Vec 初始化
         # =====================================================
         self.use_time2vec = getattr(configs, 'use_time2vec', True)
         if self.use_time2vec:
@@ -105,7 +105,7 @@ class Model(nn.Module):
         B, L, N = x_enc.shape
 
         # =====================================================
-        # 🔧 MOD-3: Time2Vec → attention time_bias（核心）
+        # Time2Vec → attention time_bias
         # =====================================================
         time_bias = None
         if self.use_time2vec and x_mark_enc is not None:
@@ -126,7 +126,7 @@ class Model(nn.Module):
         enc_out = self.enc_embedding(x_enc, x_mark_enc)      # [B, N, d_model]
 
         # =====================================================
-        # 🔧 MOD-4: 把 time_bias 送入 Encoder（而不是加到 enc_out）
+        # 把 time_bias 送入 Encoder（而不是加到 enc_out）
         # =====================================================
         enc_out, attns = self.encoder(
             enc_out,
