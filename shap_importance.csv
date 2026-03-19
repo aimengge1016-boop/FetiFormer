@@ -1,0 +1,10 @@
+feature,shap_abs_mean
+CO2(tCO2),20.18371219178684
+Lagging_Current_Reactive.Power_kVarh,9.139597662522482
+Lagging_Current_Power_Factor,1.7727131917902712
+Load_Type_encoded,1.5163683470330498
+NSM,0.9662629250436737
+Leading_Current_Power_Factor,0.8100179131675848
+Leading_Current_Reactive_Power_kVarh,0.19343635195119438
+WeekStatus_encoded,0.12660743142928618
+Day_of_week_encoded,0.0502016586106779

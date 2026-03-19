@@ -1,0 +1,10 @@
+feature,mi_score
+CO2(tCO2),1.2921834217881183
+Lagging_Current_Power_Factor,1.2875600391050428
+Lagging_Current_Reactive.Power_kVarh,0.8677380609542906
+NSM,0.46403981304473163
+Leading_Current_Power_Factor,0.4308298462939457
+Leading_Current_Reactive_Power_kVarh,0.35921691462742755
+Load_Type_encoded,0.33850913172530905
+Day_of_week_encoded,0.0988806784154721
+WeekStatus_encoded,0.06588525158626579
